@@ -4,6 +4,8 @@ import ehbs from "express-handlebars";
 import mongoose from "mongoose";
 import homeController from "./controllers/homeController.js";
 import adminRoutes from "./routes/admin.js"
+import authRoutes from "./routes/auth.js"
+import userRoutes from "./routes/user.js"
 const app = express();
 
 //* express handlebars middleware
@@ -27,5 +29,9 @@ app.get("/test",(req, res)=>{
 })
 
 app.use("/admin",adminRoutes)
+app.use("/auth",authRoutes)
+app.use("/user",userRoutes)
+
+
 // serves static files
 app.use(express.static("public"));
