@@ -4,6 +4,6 @@ const homeController = {
   },
   listen: () => {
     console.log("App running");
-  }
+  },
 };
-module.exports = homeController;
+export default homeController;

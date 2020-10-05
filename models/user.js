@@ -2,7 +2,8 @@
 // packages
 // location
 // email
-const mongoose = require("mongoose");
+//password
+import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
@@ -18,6 +19,10 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
+  password: {
+    type: String,
+    required: true,
+  },
   package: [
     {
       type: Schema.Types.ObjectId,
@@ -28,4 +33,4 @@ const userSchema = new Schema({
 
 // creates a collection of users with a structure of userSchema
 const User = mongoose.model("user", userSchema);
-module.exports = User;
+export default User;

@@ -3,7 +3,7 @@
 // description
 // user
 
-const mongoose = require("mongoose");
+import mongoose from"mongoose";
 const Schema = mongoose.Schema;
 
 const packageSchema = new Schema({
@@ -27,4 +27,4 @@ const packageSchema = new Schema({
 
 const Package = mongoose.model("package", packageSchema);
 
-module.exports = Package;
+export default Package;
