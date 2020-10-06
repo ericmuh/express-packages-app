@@ -2,7 +2,7 @@ const homeController = {
   gethome: (req, res) => {
     res.send("<h1>hello world</h1>");
   },
-  listen: () => {
+  listen: (PORT) => {
     console.log(`App running at http:localhost:${PORT}`);
   },
 };
